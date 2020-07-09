@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title|striptags }} - {{ SITENAME }}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+
+<header>
+  <h1>
+      <a href="#" rel="bookmark" title="Permalink to {{ page.title }}">
+        {{ page.title }}
+      </a>
+  </h1>
+</header>
+
+{% if page.parents %}
+{% for parent in page.parents %}
+  <div class="entry-content">
+    <p><a href="{{ SITEURL }}/{{ parent.url }}">Back to {{ parent.title }}</a></p>
+  </div>
+{% endfor %}
+{% else %}
+<div class="entry-content">
+  <p><a href="{{ SITEURL }}/index">Back to TAO Wiki home</a></p>
+</div>
+{% endif %}
+
+<section class="container">
+  {% for child in page.children %}
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xs-12 col-sm-12">
+        <div class="box">
+              <h1><a href="{{ SITEURL }}/{{ child.url }}">{{ child.title }}</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{{ page.content }}
+
+{% endblock content %}
