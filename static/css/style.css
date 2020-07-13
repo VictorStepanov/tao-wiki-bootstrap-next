@@ -78,8 +78,13 @@ pre {
     margin-right: 3px;
 }
 
+hr {
+    border-top: 1px solid #f4b942;
+}
+
 a, a:hover {
     color: inherit;
+    color: #f4b942;
 }
 
 .entry-content a {
