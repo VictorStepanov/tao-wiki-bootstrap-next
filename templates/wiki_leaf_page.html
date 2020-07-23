@@ -26,7 +26,11 @@
   </ol>
 </nav>
 
-<div class="float-right"><a href="https://github.com/VictorStepanov/tao-wiki-prototype/edit/master/content/{{ page.relative_source_path }}">Edit on <i class="icon-github"></i>GitHub</a></div><br><br>
+<div class="float-right"><a href="https://github.com/VictorStepanov/tao-wiki-prototype/edit/master/content/{{ page.relative_source_path }}">Edit on <i class="icon-github"></i>GitHub</a></div>
+<div class="float-left">
+{% include 'includes/page_taglist.html' %}
+</div>
+<br><br>
 
 {{ page.content }}
 
