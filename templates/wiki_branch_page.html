@@ -26,12 +26,12 @@
   </ol>
 </nav>
 
+{{ page.content }}
+
 <ul>
   {% for child in page.children %}
   <li><h4><a href="{{ SITEURL }}/{{ child.url }}">{{ child.title }}</a></h4></li>
   {% endfor %}
 </ul>
-
-{{ page.content }}
 
 {% endblock content %}
